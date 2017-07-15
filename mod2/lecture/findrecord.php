@@ -20,7 +20,7 @@
 	include 'config.php';
 	include 'opendb.php';
 
-               $lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
+$lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
 
 $sql= "SELECT id, fname, lname, address, city, state FROM customers where lname = '$lname' ";
 $result = mysqli_query($conn, $sql);
