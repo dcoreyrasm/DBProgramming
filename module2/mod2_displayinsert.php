@@ -20,7 +20,7 @@
 	include 'mod2_config_sampledb.php';
 	include 'mod2_opendb.php';
 
-               $id= (isset($_POST['id'])    ? $_POST['id']   : '');
+$id= (isset($_POST['id'])    ? $_POST['id']   : '');
 
 $sql= "	SELECT id, fname, lname, address, city, state, zip from customers WHERE id = '$id' LIMIT 1";
 

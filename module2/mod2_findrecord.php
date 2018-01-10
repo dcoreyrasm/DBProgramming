@@ -20,7 +20,7 @@
 	include 'mod2_config.php';
 	include 'mod2_opendb.php';
 
-               $lastname = (isset($_POST['LastName'])    ? $_POST['LastName']   : '');
+$lastname = (isset($_POST['LastName'])    ? $_POST['LastName']   : '');
 
 $sql= "SELECT ContactID, FirstName, LastName, EmailAddress FROM contact where LastName = '$lastname' ";
 $result = mysqli_query($conn, $sql);

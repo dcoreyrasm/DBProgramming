@@ -2,6 +2,6 @@
 // This is an example of config.php
 $dbhost = 'localhost';
 $dbuser = 'rasm_user';
-$dbpass = 'SVsBbQHXYHfOHkoy';
+$dbpass = '5BdhCShxISs9ajsL';
 $dbname = 'adventureworks';
 ?>
