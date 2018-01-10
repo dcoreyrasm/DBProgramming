@@ -20,17 +20,17 @@
 	include 'mod2_config.php';
 	include 'mod2_opendb.php';
 
-$lastname = (isset($_POST['LastName'])    ? $_POST['LastName']   : '');
+               $lastname = (isset($_POST['LastName'])    ? $_POST['LastName']   : '');
 
-$sql= "SELECT id, fname, lname, address FROM customers where lname = '$lastname' ";
+$sql= "SELECT ContactID, FirstName, LastName, EmailAddress FROM contact where LastName = '$lastname' ";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-				echo "<b>ID: " . $row["ContactID"]. "</b><br>";
-			  echo "<b>Name: " . $row["fname"]. " " . $row["lname"]. "</b><br>";
-        echo "<b>Address: " . $row["address"]. "</b><br><hr>";
+				echo "<b>ContactID: " . $row["ContactID"]. "</b><br>";
+			  echo "<b>Name: " . $row["FirstName"]. " " . $row["LastName"]. "</b><br>";
+        echo "<b>Email: " . $row["EmailAddress"]. "</b><br><hr>";
     }
 } else {
     echo "Sorry there are no matches! Please check your entry and try again.";
