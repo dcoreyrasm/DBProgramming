@@ -66,7 +66,7 @@
       } else {
       	echo "Sorry there are no matches! Please check your entry and try again.";
       }
-      
+
 
       mysqli_close($conn);
       ?>
